@@ -1,0 +1,32 @@
+// Variables and mixins
+@import "../../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+li{
+  list-style: none;
+}
+.app-off-canvas-toggle {
+  position: relative;
+
+  .close {
+    display: none;
+    z-index: $zindex-4;
+  }
+}
+
+#app-sidebar {
+  &:target ~ .app-off-canvas-toggle {
+    .open {
+      display: none;
+    }
+    .close {
+      display: block;
+     
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .app-off-canvas-toggle {
+    display: none;
+  }
+}

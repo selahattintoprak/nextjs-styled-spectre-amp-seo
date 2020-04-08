@@ -1,0 +1,17 @@
+// Variables and mixins
+@import "../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+
+.app-container {
+  &.off-canvas {
+    .off-canvas-content {
+      padding: 0;
+    }
+  }
+  min-height: 100vh;
+}
+.app-content {
+  min-width: auto;
+  margin-top: 2.8rem;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+// Variables and mixins
+@import "variables";
+@import "mixins/shadow.scss";
+
+// Sliders
+// Credit: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+@import "node_modules/spectre.css/src/sliders.scss";

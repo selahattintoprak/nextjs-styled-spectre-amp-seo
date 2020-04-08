@@ -1,0 +1,10 @@
+// Import full Spectre source code
+// @import "node_modules/spectre.css/src/spectre";
+
+// Variables and mixins
+@import "variables";
+@import "mixins/shadow"; // Medium
+
+// Base
+@import "node_modules/spectre.css/src/base";
+

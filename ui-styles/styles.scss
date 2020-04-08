@@ -1,0 +1,23 @@
+// Import full Spectre source code
+//@import "node_modules/spectre.css/src/spectre";
+
+// Variables and mixins
+@import "variables";
+@import "mixins"; // Mixins gets placed in the bundle only when used.
+
+
+// Reset and dependencies
+@import "normalize"; // Medium
+@import "base.scss";
+
+// Utility classes
+@import "utilities"; // Are css classes and will be in the bundle once imported.
+
+$color: #2ecc71;
+
+text {
+  background-color: $color;
+  :hover {
+    background-color: darken($color, 20%);
+  }
+}

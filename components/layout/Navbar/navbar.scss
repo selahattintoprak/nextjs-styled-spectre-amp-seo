@@ -1,0 +1,99 @@
+// Variables and mixins
+@import "../../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+
+amp-mega-menu nav {
+  background-color: transparent;
+  ul li,
+  ol li {
+    margin: 0 0.1rem;
+  }
+}
+
+amp-mega-menu .menu-item[open] > span {
+  background-color: transparent;
+}
+
+amp-mega-menu .menu-item[open] > div {
+  left: auto;
+  max-width: 100%;
+}
+
+[class*="amphtml-sidebar-mask"] {
+  margin-top: 2.8rem;
+  z-index: $zindex-0;
+}
+
+[class*="amphtml-mega-menu-mask"] {
+  margin-top: 2.8rem;
+  z-index: $zindex-0;
+}
+
+.app-header {
+  position: fixed;
+  height: 2.8rem;
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  flex: 1 0 auto;
+  align-items: center;
+  //backdrop-filter: blur(5px);
+  //background: rgba($bg-color, 0.65);
+  background: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0 3px 4px 0 rgba(0,0,0,.2), 0 3px 3px -2px rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+  align-items: center;
+  z-index: $zindex-4;
+  &:not(:first-child):last-child {
+    justify-content: flex-end;
+  }
+}
+.app-header {
+  .app-mega-menu {
+    justify-self: flex-start;
+    .app-navbar {
+      .app-nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
+        flex: 1 0 auto;
+        align-items: center;
+      }
+    }
+  }
+  .navbar-actions {
+    display: flex;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+}
+
+.app-navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  .app-off-canvas-toggle {
+    position: relative;
+  }
+}
+@media (min-width: 960px) {
+  .app-header {
+   .navbar-toggle {
+      display: none;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .app-header {
+    .app-mega-menu, .navbar-actions {
+      display: none;
+    }
+  }
+}

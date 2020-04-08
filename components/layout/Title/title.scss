@@ -1,0 +1,40 @@
+// Variables and mixins
+@import "../../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+
+.s-title,
+.s-subtitle {
+  line-height: 1.8rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  position: static;
+
+  @supports (position: sticky) {
+    position: sticky;
+    top: 0;
+    z-index: $zindex-0 - 1;
+
+    &::before {
+      background: $light-color;
+      bottom: 0;
+      content: "";
+      display: block;
+      left: -10px;
+      position: absolute;
+      right: -10px;
+      top: -5px;
+      z-index: -$zindex-0;
+    }
+  }
+
+  &:hover {
+    .anchor {
+      display: inline;
+    }
+  }
+
+  & + .app-note {
+    margin-top: 0.4rem;
+  }
+}

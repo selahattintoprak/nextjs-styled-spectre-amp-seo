@@ -1,0 +1,42 @@
+// Variables and mixins
+@import "../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+
+.app-demo {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  .card {
+    box-shadow: 0 0.25rem 1rem rgba($dark-color, 0.15);
+    border: 0;
+    height: 100%;
+  }
+}
+
+.column {
+  padding: $layout-spacing;
+}
+
+.app-content {
+  flex: 1 1 auto;
+  padding: 0 4rem;
+  width: calc(100vw - 12rem);
+
+  & > .container {
+    margin-left: 0;
+    max-width: 800px;
+    padding-bottom: 1.5rem;
+  }
+
+  .anchor {
+    color: $primary-color-light;
+    display: none;
+    margin-left: 0.2rem;
+    padding: 0 0.2rem;
+    &:focus,
+    &:hover {
+      display: inline;
+      text-decoration: none;
+    }
+  }
+}

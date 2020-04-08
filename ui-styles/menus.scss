@@ -1,0 +1,14 @@
+// Variables and mixins
+@import "variables";
+@import "mixins/shadow.scss";
+
+// Menus
+@import "node_modules/spectre.css/src/menus.scss";
+
+.menu {
+  display: none;
+}
+.dropdown:hover > .menu,
+.menu:hover {
+  display: block;
+}

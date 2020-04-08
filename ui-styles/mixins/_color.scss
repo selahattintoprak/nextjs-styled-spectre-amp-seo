@@ -1,0 +1,29 @@
+// Background color utility mixin
+// @import "node_modules/spectre.css/src/mixins/color.scss";
+
+@mixin bg-color-variant($name: ".bg-primary", $color: $primary-color) {
+  #{$name} {
+    background: $color; // !important;
+
+    @if (lightness($color) < 60) {
+      color: $light-color;
+    }
+  }
+}
+
+// Text color utility mixin
+@mixin text-color-variant($name: ".text-primary", $color: $primary-color) {
+  #{$name} {
+    color: $color; // !important;
+  }
+
+  a#{$name} {
+    &:focus,
+    &:hover {
+      color: darken($color, 5%);
+    }
+    &:visited {
+      color: lighten($color, 5%);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Example of project-name.scss
+// Define variables to override default ones
+
+// Core colors
+///$primary-color:#ff8a00;// #3880ff;
+$primary-color: #673ab7;
+//Gray Colors
+//$dark-color:#111111;
+//$light-color: #ffffff;
+
+// Control colors
+$success-color: #2dd36f !default;
+$warning-color: #ffc409 !default;
+$error-color: #eb445a !default;
+
+// Other colors
+$code-color: #d73e48 !default;
+$highlight-color: #ffe9b3 !default;
+// Variables
+@import "node_modules/spectre.css/src/variables";
