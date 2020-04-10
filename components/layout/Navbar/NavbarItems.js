@@ -25,9 +25,11 @@ const MenuItem = ({ title, link, index }) => (
 const SubmenuItem = ({ title, link, columns }) => (
   <>
     <li className="menu-item">
-      <a href={link} className="btn btn-link">
-        {title}
-      </a>
+      <ActiveLink activeClassName="active" href={link}>
+        <a className="btn btn-link">
+          {title}
+        </a>
+      </ActiveLink>
     </li>
     <li className="menu-item">
       <a href="#" className="btn" role="button">
@@ -48,9 +50,9 @@ const SubmenuItem = ({ title, link, columns }) => (
 );
 const Column = ({ items, index, divider }) => (
   <>
-    {index != 0 && <div className="divider-vert"></div>}
+    {index != 0 && divider && <div className="divider-vert"></div>}
     <div className="column">
-      <li className="divider" data-content={divider}></li>
+      {divider && <li className="divider" data-content={divider}></li>}
       {items.map(({ title, ...rest }) => (
         <Item key={title} title={title} {...rest} />
       ))}
@@ -61,7 +63,9 @@ const Item = ({ title, link, divider }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
     <li className="menu-item">
-      <a href={link}>{title}</a>
+      <ActiveLink activeClassName="active" href={link}>
+        <a>{title}</a>
+      </ActiveLink>
     </li>
   </>
 );

@@ -11,7 +11,7 @@ export default () => (
         <a className="app-logo" >
           <amp-img
             alt="Spectre.css CSS Framework"
-            src={"static/images/" + src}
+            src={"/static/images/" + src}
             height="32"
             width="32"
           />

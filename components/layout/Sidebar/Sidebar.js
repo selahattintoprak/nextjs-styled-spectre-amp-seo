@@ -1,4 +1,5 @@
 import sidebarScss from "./sidebar.scss";
+import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
 
 export default ({ menuItems, navbarActions }) => (
@@ -11,18 +12,18 @@ export default ({ menuItems, navbarActions }) => (
             <React.Fragment key={index}>
               {!columns && (
                 <li className="menu-item">
-                  <a href={link} className="btn btn-link">
-                    {title}
-                  </a>
+                  <ActiveLink activeClassName="active" href={link}>
+                    <a className="btn btn-link">{title}</a>
+                  </ActiveLink>
                 </li>
               )}
 
               {columns && (
                 <>
                   <li className="menu-item">
-                    <a href={link} className="btn btn-link">
-                      {title}
-                    </a>
+                    <ActiveLink activeClassName="active" href={link}>
+                      <a className="btn btn-link">{title}</a>
+                    </ActiveLink>
                     <h4 className="btn" amp-nested-submenu-open="">
                       <i className="icon icon-caret"></i>
                     </h4>
@@ -75,7 +76,9 @@ const Item = ({ title, link, divider }) => (
   <>
     {divider && <li className="divider" data-content={divider}></li>}
     <li className="menu-item">
-      <a href={link}>{title}</a>
+      <ActiveLink activeClassName="active" href={link}>
+        <a href={link}>{title}</a>
+      </ActiveLink>
     </li>
   </>
 );
