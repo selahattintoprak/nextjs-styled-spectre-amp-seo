@@ -13,11 +13,10 @@ export default () => (
             style={{
               fontSize: "1.75rem",
               fontWeight: "bold",
-
               marginTop: "4rem",
             }}
           >
-            Moving.Deals
+            Moving.Deals 2.0
           </h1>
           <div className="columns">
             <div className="column col-6 col-xs-12">

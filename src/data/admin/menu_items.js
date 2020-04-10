@@ -1,5 +1,6 @@
 export const menuItems = [
   {
+    id: "inventory",
     title: "Inventory",
     link: "/admin/inventory",
     back: "Inventory",
@@ -15,6 +16,7 @@ export const menuItems = [
     ],
   },
   {
+    id: "moves",
     title: "Moves",
     link: "/admin/moves",
     back: "Moves",

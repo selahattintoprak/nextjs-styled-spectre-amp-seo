@@ -14,26 +14,31 @@ import {
 } from "../../ui-styles/styles";
 export default ({
   navbarActions,
-  menuItems,
+  navbarItems,
+  sidebarItems,
   logoLink,
   sidebar,
   children,
   footer,
   title,
   anchor,
+  navbarToggle,
 }) => {
   let classes = sidebar ? "off-canvas-sidebar-show" : "";
   return (
     <>
       <div className={"app-container off-canvas " + classes}>
-        <Navbar menuItems={menuItems} navbarActions={navbarActions} logoLink={logoLink} />
-        <Sidebar menuItems={menuItems} navbarActions={navbarActions} />
+        <Navbar
+          navbarItems={navbarItems}
+          navbarActions={navbarActions}
+          navbarToggle={navbarToggle}
+          logoLink={logoLink}
+        />
 
-        {sidebar && (
-          <div className="app-sidebar">
-            <div className="off-canvas-sidebar">{sidebar}</div>
-          </div>
-        )}
+        {sidebarItems && <Sidebar sidebarItems={sidebarItems} navbarActions={navbarActions} />}
+
+        {sidebar}
+
         <div className="off-canvas-content">
           <div className="app-content" id="content">
             <div className="app-content-container" id={anchor}>

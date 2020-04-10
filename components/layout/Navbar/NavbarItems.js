@@ -1,9 +1,9 @@
 import navbarItemsScss from "./navbar-items.scss";
 import ActiveLink from "../../ActiveLink";
 
-export default ({ menuItems }) => (
+export default ({ navbarItems }) => (
   <>
-    {menuItems.map(({ columns, ...rest }, index) => (
+    {navbarItems.map(({ columns, ...rest }, index) => (
       <React.Fragment key={index}>
         {!columns && <MenuItem columns={columns} {...rest} />}
         {columns && <SubmenuItem columns={columns} {...rest} />}

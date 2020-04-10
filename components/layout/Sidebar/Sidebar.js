@@ -2,13 +2,13 @@ import sidebarScss from "./sidebar.scss";
 import ActiveLink from "../../ActiveLink";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
 
-export default ({ menuItems, navbarActions }) => (
+export default ({ sidebarItems, navbarActions }) => (
   <>
     <AmpIncludeAmpSidebar />
     <amp-sidebar className="app-sidebar" id="app-sidebar" layout="nodisplay" side="left">
       <amp-nested-menu layout="fill">
         <ul>
-          {menuItems.map(({ title, link, columns, back }, index) => (
+          {sidebarItems.map(({ title, link, columns, back }, index) => (
             <React.Fragment key={index}>
               {!columns && (
                 <li className="menu-item">

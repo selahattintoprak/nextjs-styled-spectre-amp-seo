@@ -4,13 +4,15 @@ import NavbarActions from "./NavbarActions/NavbarActions";
 import { menuItems } from "../../src/data/client/menu_items";
 import { NextSeo } from "next-seo";
 import Footer from "./Footer/Footer";
-
+import Toggle from "./Toggle/Toggle";
 export default ({ children, title, description, seo }) => (
   <>
     <Page title={title} description={description}>
       <Layout
         navbarActions={<NavbarActions divider />}
-        menuItems={menuItems}
+        navbarToggle={<Toggle />}
+        navbarItems={menuItems}
+        sidebarItems={menuItems}
         logoLink={"/"}
         footer={<Footer />}
       >
