@@ -1,4 +1,3 @@
-import homeScss from "../src/pages/home/home.scss";
 import Quotes from "../components/Quotes/Quotes";
 import ClientPage from "../components/ClientPage/ClientPage";
 
@@ -32,10 +31,11 @@ export default () => (
       </section>
     </ClientPage>
     <style jsx global>
-      {homeScss}
-    </style>
-    <style jsx global>
       {`
+        .app-content {
+          flex: 1 1 auto;
+          padding: 0 0;
+        }
         body {
           background: #3dc2ff;
         }
@@ -44,6 +44,10 @@ export default () => (
           border-radius: 0.2rem;
           background: #ffffff;
           margin-bottom: 4rem;
+        }
+        .section-quotes {
+          justify-content: center;
+          align-items: center;
         }
       `}
     </style>

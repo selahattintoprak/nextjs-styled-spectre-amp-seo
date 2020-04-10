@@ -1,4 +1,3 @@
-import { FormsStyles } from "../../ui-styles/styles";
 import AmpDatePicker from "../amp/AmpDatePicker";
 import IconInput from "../ui/form-inputs/IconInput";
 import SelectForm from "../ui/form-inputs/SelectForm";
@@ -47,7 +46,6 @@ export default ({ className, extras }) => (
     )}
     <button className="btn btn-block">Compare Movers & Get Prices</button>
 
-    <FormsStyles />
   </>
 );
 

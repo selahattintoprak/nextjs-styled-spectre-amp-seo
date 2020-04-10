@@ -25,5 +25,8 @@ export default ({ children, title, titleAnchor, description }) => (
         {children}
       </Layout>
     </Page>
+    <style jsx global>
+      {``}
+    </style>
   </>
 );
