@@ -54,7 +54,7 @@ export default () => (
       {`
         @media (min-width: 960px) {
           .section-banner .container .columns {
-            width: 50%;
+            width: 80%;
             margin-left: auto;
             margin-right: auto;
           }

@@ -1,12 +1,14 @@
 // Variables and mixins
 @import "../../../ui-styles/variables.scss";
 @import "node_modules/spectre.css/src/mixins";
-
+li {
+  list-style: none;
+}
 .app-brand {
   color: $primary-color;
   height: 2rem;
   z-index: $zindex-4;
-  
+
   .app-logo {
     align-items: center;
     border-radius: $border-radius;
