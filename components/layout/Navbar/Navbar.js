@@ -3,10 +3,10 @@ import Brand from "../Brand/Brand";
 import NavbarItems from "../Navbar/NavbarItems";
 import Toggle from "../Toggle/Toggle";
 
-export default ({ children, menuItems, navbarActions }) => (
+export default ({ children, menuItems, navbarActions, logoLink }) => (
   <>
     <header className="app-header">
-      <Brand />
+      <Brand logoLink={logoLink} />
       <amp-mega-menu className="app-mega-menu" id="mega-menu" height="55px">
         <nav className="app-navbar" style={{ height: "55px" }}>
           <ul className="nav app-nav" style={{ flexDirection: "row" }}>
@@ -16,7 +16,7 @@ export default ({ children, menuItems, navbarActions }) => (
       </amp-mega-menu>
 
       {navbarActions && <div className="navbar-actions">{navbarActions}</div>}
-      
+
       <div className="navbar-toggle">
         <Toggle />
       </div>

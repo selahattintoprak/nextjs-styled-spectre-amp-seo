@@ -4,11 +4,11 @@ import brand from "../../../src/data/brand";
 import ActiveLink from "../../ActiveLink";
 
 const { src, title, badge } = brand;
-export default () => (
+export default ({logoLink}) => (
   <li className="navbar-brand">
     <div className="app-brand">
-      <ActiveLink href="/">
-        <a className="app-logo" >
+      <ActiveLink href={logoLink}>
+        <a className="app-logo">
           <amp-img
             alt="Spectre.css CSS Framework"
             src={"/static/images/" + src}

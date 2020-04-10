@@ -5,7 +5,9 @@ import { menuItems } from "../../src/data/admin/menu_items";
 export default ({ children, title, description }) => (
   <>
     <Page title={title} description={description}>
-      <Layout menuItems={menuItems}>{children}</Layout>
+      <Layout menuItems={menuItems} logoLink="/admin">
+        {children}
+      </Layout>
     </Page>
   </>
 );

@@ -12,12 +12,21 @@ import {
   NavsStyles,
   NavbarStyles,
 } from "../../ui-styles/styles";
-export default ({ navbarActions, menuItems, sidebar, children, footer, title, anchor }) => {
+export default ({
+  navbarActions,
+  menuItems,
+  logoLink,
+  sidebar,
+  children,
+  footer,
+  title,
+  anchor,
+}) => {
   let classes = sidebar ? "off-canvas-sidebar-show" : "";
   return (
     <>
       <div className={"app-container off-canvas " + classes}>
-        <Navbar menuItems={menuItems} navbarActions={navbarActions} />
+        <Navbar menuItems={menuItems} navbarActions={navbarActions} logoLink={logoLink} />
         <Sidebar menuItems={menuItems} navbarActions={navbarActions} />
 
         {sidebar && (

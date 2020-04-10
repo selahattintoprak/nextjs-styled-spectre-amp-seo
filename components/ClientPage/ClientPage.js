@@ -8,7 +8,12 @@ import Footer from "./Footer/Footer";
 export default ({ children, title, description, seo }) => (
   <>
     <Page title={title} description={description}>
-      <Layout navbarActions={<NavbarActions divider />} menuItems={menuItems} footer={<Footer />}>
+      <Layout
+        navbarActions={<NavbarActions divider />}
+        menuItems={menuItems}
+        logoLink={"/"}
+        footer={<Footer />}
+      >
         <NextSeo config={{ ...seo }} />
         {children}
       </Layout>
