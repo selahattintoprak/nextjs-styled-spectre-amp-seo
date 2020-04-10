@@ -6,13 +6,12 @@
 .s-subtitle {
   line-height: 1.8rem;
   margin-bottom: 0;
-  padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding: 0.5rem;
   position: static;
 
   @supports (position: sticky) {
     position: sticky;
-    top: 0;
+    top: 2.8rem;
     z-index: $zindex-0 - 1;
 
     &::before {
@@ -27,7 +26,12 @@
       z-index: -$zindex-0;
     }
   }
-
+  @media (min-width: 960px) {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    z-index: $zindex-4;
+  }
   &:hover {
     .anchor {
       display: inline;
@@ -36,5 +40,16 @@
 
   & + .app-note {
     margin-top: 0.4rem;
+  }
+  .anchor {
+    color: $primary-color-light;
+    display: none;
+    margin-left: 0.2rem;
+    padding: 0 0.2rem;
+    &:focus,
+    &:hover {
+      display: inline;
+      text-decoration: none;
+    }
   }
 }

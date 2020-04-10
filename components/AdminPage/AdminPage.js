@@ -6,10 +6,12 @@ import Sidebar from "../ui/Sidebar/Sidebar";
 import Accordions from "../ui/Accordions/Accordions";
 import Toggle from "./Toggle/Toggle";
 
-export default ({ children, title, description }) => (
+export default ({ children, title, titleAnchor, description }) => (
   <>
     <Page title={title} description={description}>
       <Layout
+        title={title}
+        titleAnchor={titleAnchor || "#"}
         logoLink="/admin"
         navbarActions={<NavbarActions />}
         navbarToggle={<Toggle />}

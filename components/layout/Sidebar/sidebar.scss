@@ -2,6 +2,11 @@
 @import "../../../ui-styles/variables.scss";
 @import "node_modules/spectre.css/src/mixins";
 
+[class*="amphtml-sidebar-mask"] {
+  margin-top: 2.8rem;
+  z-index: $zindex-0;
+  background: rgba($dark-color, 0.5);
+}
 .app-sidebar {
   top: 2.8rem;
   width: 12rem;
@@ -54,7 +59,7 @@
           background: transparent;
           color: $gray-color-dark;
           display: inline-block;
-          padding: .3rem .4rem;
+          padding: 0.3rem 0.4rem;
         }
       }
     }

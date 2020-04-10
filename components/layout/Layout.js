@@ -21,7 +21,7 @@ export default ({
   children,
   footer,
   title,
-  anchor,
+  titleAnchor,
   navbarToggle,
 }) => {
   let classes = sidebar ? "off-canvas-sidebar-show" : "";
@@ -41,8 +41,8 @@ export default ({
 
         <div className="off-canvas-content">
           <div className="app-content" id="content">
-            <div className="app-content-container" id={anchor}>
-              {title && <Title title={title} />}
+            <div className="app-content-container" id={titleAnchor}>
+              {title && <Title title={title} titleAnchor={titleAnchor} />}
               {children}
             </div>
             {footer && (
