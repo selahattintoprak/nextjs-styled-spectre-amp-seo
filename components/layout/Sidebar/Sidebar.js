@@ -1,8 +1,7 @@
 import sidebarScss from "./sidebar.scss";
 import { AmpIncludeAmpSidebar } from "../../amp/AmpCustomElement";
-import { menuItems } from "../../../src/data/menu_items";
-import NavbarActions from "../Navbar/NavbarActions";
-export default () => (
+
+export default ({ menuItems, navbarActions }) => (
   <>
     <AmpIncludeAmpSidebar />
     <amp-sidebar className="app-sidebar" id="app-sidebar" layout="nodisplay" side="left">
@@ -53,9 +52,7 @@ export default () => (
               )}
             </React.Fragment>
           ))}
-          <li className="sidebar-actions">
-            <NavbarActions />
-          </li>
+          {navbarActions && <li className="sidebar-actions">{navbarActions}</li>}
         </ul>
       </amp-nested-menu>
     </amp-sidebar>

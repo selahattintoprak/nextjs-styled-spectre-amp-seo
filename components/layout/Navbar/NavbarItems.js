@@ -1,8 +1,7 @@
-import { menuItems } from "../../../src/data/menu_items";
 import navbarItemsScss from "./navbar-items.scss";
 import ActiveLink from "../../ActiveLink";
 
-export default prop => (
+export default ({ menuItems }) => (
   <>
     {menuItems.map(({ columns, ...rest }, index) => (
       <React.Fragment key={index}>
@@ -19,9 +18,7 @@ export default prop => (
 const MenuItem = ({ title, link, index }) => (
   <li key={index} className="menu-item">
     <ActiveLink activeClassName="active" href={link}>
-      <a className="btn btn-link">
-        {title}
-      </a>
+      <a className="btn btn-link">{title}</a>
     </ActiveLink>
   </li>
 );

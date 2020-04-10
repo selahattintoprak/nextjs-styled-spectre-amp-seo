@@ -1,38 +1,36 @@
 import homeScss from "../src/pages/home/home.scss";
 import Quotes from "../components/Quotes/Quotes";
-import Page from "../components/Page";
-import Layout from "../components/layout/Layout";
+import ClientPage from "../components/ClientPage/ClientPage";
 
 export const config = { amp: true };
+
 export default () => (
   <>
-    <Page title="Moving Deals" description="Compare Moving Deals & Quotes">
-      <Layout>
-        <section className="section section-quotes" style={{ background: "#3dc2ff" }}>
-          <div className="container">
-            <div className="columns">
-              <div className="column col-md-12 col-5 col-mx-auto">
-                <h1
-                  className="text-center"
-                  style={{
-                    fontSize: "1.75rem",
-                    fontWeight: "bold",
-                    color: "white",
-                    marginTop: "4rem"
-                  }}
-                >
-                  Book your move online
-                </h1>
+    <ClientPage title="Moving Deals" description="Compare Moving Deals & Quotes">
+      <section className="section section-quotes" style={{ background: "#3dc2ff" }}>
+        <div className="container">
+          <div className="columns">
+            <div className="column col-md-12 col-5 col-mx-auto">
+              <h1
+                className="text-center"
+                style={{
+                  fontSize: "1.75rem",
+                  fontWeight: "bold",
+                  color: "white",
+                  marginTop: "4rem",
+                }}
+              >
+                Book your move online
+              </h1>
 
-                <div className="form-group quotes-form">
-                  <Quotes extras></Quotes>
-                </div>
+              <div className="form-group quotes-form">
+                <Quotes extras></Quotes>
               </div>
             </div>
           </div>
-        </section>
-      </Layout>
-    </Page>
+        </div>
+      </section>
+    </ClientPage>
     <style jsx global>
       {homeScss}
     </style>
@@ -45,7 +43,7 @@ export default () => (
           padding: 16px;
           border-radius: 0.2rem;
           background: #ffffff;
-          margin-bottom:4rem;
+          margin-bottom: 4rem;
         }
       `}
     </style>

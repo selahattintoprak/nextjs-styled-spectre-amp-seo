@@ -1,6 +1,5 @@
 import layoutScss from "./layout.scss";
 import Sidebar from "./Sidebar/Sidebar";
-import Footer from "./Footer/Footer";
 import Title from "./Title/Title";
 import Navbar from "./Navbar/Navbar";
 import {
@@ -13,13 +12,13 @@ import {
   NavsStyles,
   NavbarStyles,
 } from "../../ui-styles/styles";
-export default ({ sidebar, children, footer, title, anchor }) => {
+export default ({ navbarActions, menuItems, sidebar, children, footer, title, anchor }) => {
   let classes = sidebar ? "off-canvas-sidebar-show" : "";
   return (
     <>
       <div className={"app-container off-canvas " + classes}>
-        <Navbar />
-        <Sidebar />
+        <Navbar menuItems={menuItems} navbarActions={navbarActions} />
+        <Sidebar menuItems={menuItems} navbarActions={navbarActions} />
 
         {sidebar && (
           <div className="app-sidebar">
@@ -32,13 +31,9 @@ export default ({ sidebar, children, footer, title, anchor }) => {
               {title && <Title title={title} />}
               {children}
             </div>
-            {footer ? (
-              <div className="page-footer container grid-lg" id="page-footer">
+            {footer && (
+              <div className="page-footer container grid-lg" id="app-footer">
                 {footer}
-              </div>
-            ) : (
-              <div className="app-footer container grid-lg" id="app-footer">
-                <Footer />
               </div>
             )}
           </div>

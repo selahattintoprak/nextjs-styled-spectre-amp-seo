@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import NextHead from "next/head";
 import { AmpIncludeAmpInstallServiceworker } from "./amp/AmpCustomElement";
-import { NextSeo } from "next-seo";
-import SEO from "../next-seo.config2";
+import SEO from "../next-seo.config-page";
 
 // Your app's theme color
 const THEME_COLOR = "#005af0";
@@ -23,7 +22,6 @@ const Page = props => (
       <link rel="icon" href="/static/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
     </NextHead>
-    <NextSeo config={{ ...SEO }} />
     {props.children}
     <AmpIncludeAmpInstallServiceworker />
     <amp-install-serviceworker
