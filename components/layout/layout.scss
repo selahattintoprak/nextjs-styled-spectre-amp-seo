@@ -11,8 +11,6 @@
   min-height: 100vh;
 }
 .app-content {
-  flex: 1 1 auto;
-  padding: 0 1rem;
   min-width: auto;
   margin-top: 2.8rem;
   width: 100%;
@@ -30,4 +28,33 @@
 }
 .column {
   padding: $layout-spacing;
+}
+
+.app-content {
+  .card {
+    box-shadow: 0 0.25rem 1rem rgba($dark-color, 0.15);
+    border: 0;
+    height: 100%;
+  }
+  .tile {
+    box-shadow: 0 0.25rem 1rem rgba($dark-color, 0.15);
+    border: 0;
+    height: 100%;
+    padding:16px;
+  }
+  .example-tile-icon {
+    align-content: space-around;
+    align-items: center;
+    background: $primary-color;
+    border-radius: $border-radius;
+    color: $light-color;
+    display: flex;
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .icon {
+    margin: auto;
+  }
 }

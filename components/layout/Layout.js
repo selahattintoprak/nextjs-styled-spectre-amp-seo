@@ -12,6 +12,7 @@ import {
   NavsStyles,
   NavbarStyles,
   FormsStyles,
+  CardsStyles,
 } from "../../ui-styles/styles";
 
 export default ({
@@ -63,7 +64,8 @@ export default ({
       <IconsStyles />
       <NavbarStyles />
       <NavsStyles />
-      <FormsStyles/>
+      <FormsStyles />
+      <CardsStyles />
       <style jsx global>
         {layoutScss}
       </style>

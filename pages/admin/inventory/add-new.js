@@ -58,16 +58,7 @@ export default () => (
                 <option>Slack</option>
                 <option>Skype</option>
                 <option>Hipchat</option>
-              </select>
-                "common_item": false,
-    "name": "Dining Chair",
-    "is_crating": false,
-    "is_off_the_wall": false,
-    "is_assembly": false,
-    "is_piano": false,
-    "cubic_feet": 6,
-    "description": ""
-              
+              </select>              
               */}
                 <div className="form-group">
                   <label className="form-label" for="input-cubic-feet">
