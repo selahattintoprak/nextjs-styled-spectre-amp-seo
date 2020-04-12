@@ -5,7 +5,7 @@ import NavbarActions from "./NavbarActions/NavbarActions";
 import Sidebar from "../ui/Sidebar/Sidebar";
 import Accordions from "../ui/Accordions/Accordions";
 import Toggle from "./Toggle/Toggle";
-
+import Login from "../Login";
 export default ({ children, title, titleAnchor, description }) => (
   <>
     <Page title={title} description={description}>
@@ -22,6 +22,7 @@ export default ({ children, title, titleAnchor, description }) => (
         }
         href="#admin-sidebar"
       >
+        <Login />
         {children}
       </Layout>
     </Page>
