@@ -1,11 +1,11 @@
 import Quotes from "../components/Quotes/Quotes";
-import ClientPage from "../components/ClientPage/ClientPage";
+import SinglePage from "../components/SinglePage/SinglePage";
 
 export const config = { amp: true };
 
 export default () => (
   <>
-    <ClientPage title="Moving Deals" description="Compare Moving Deals & Quotes">
+    <SinglePage title="Moving Deals" description="Compare Moving Deals & Quotes">
       <section className="section section-quotes" style={{ background: "#3dc2ff" }}>
         <div className="container">
           <div className="columns">
@@ -29,7 +29,7 @@ export default () => (
           </div>
         </div>
       </section>
-    </ClientPage>
+    </SinglePage>
     <style jsx global>
       {`
         .app-content {

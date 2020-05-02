@@ -1,0 +1,12 @@
+// Variables and mixins
+@import "../../../ui-styles/variables.scss";
+@import "node_modules/spectre.css/src/mixins";
+
+.app-footer {
+  color: $gray-color;
+  padding: 0.5rem;
+
+  a {
+    color: $gray-color-dark;
+  }
+}

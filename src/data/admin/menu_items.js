@@ -1,4 +1,6 @@
-export const menuItems = [
+export const menuItems = [];
+
+/* [
   {
     id: "inventory",
     title: "Inventory",
@@ -32,3 +34,4 @@ export const menuItems = [
     ],
   },
 ];
+ */
