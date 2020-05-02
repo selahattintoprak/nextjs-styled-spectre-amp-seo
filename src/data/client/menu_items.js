@@ -1,4 +1,5 @@
-export const menuItems = [
+export const menuItems = [];
+/* [
   { title: "About Us", link: "/about-us" },
   { title: "How It works", link: "/how-it-works" },
   { title: "FAQ", link: "/faq" },
@@ -32,4 +33,4 @@ export const menuItems = [
     ]
   },
   { title: "Contact", link: "/#" }
-];
+]; */
